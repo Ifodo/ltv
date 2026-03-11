@@ -7,7 +7,7 @@
     <application
         android:label="LTV"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_500"
         android:usesCleartextTraffic="true"
         android:hardwareAccelerated="true">
         <activity

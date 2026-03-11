@@ -67,6 +67,14 @@ dependencies:
   # UI components for notifications
   top_snackbar_flutter: ^3.3.0
 
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: "logo_500"
+  ios: true
+  image_path: "assets/logo_500.jpg"
+  remove_alpha_ios: true
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lagostv/home.dart';
 import 'package:lagostv/landing_page.dart';
 
 void main() {

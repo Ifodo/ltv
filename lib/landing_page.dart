@@ -30,7 +30,7 @@ class _LandingPageState extends State<LandingPage> {
               ),
               SizedBox(height: screenHeight / 5.5),
 
-              Container(
+              SizedBox(
                 width: screenWidth / 1.4,
                 height: 45,
                 child: ElevatedButton(
@@ -40,10 +40,10 @@ class _LandingPageState extends State<LandingPage> {
                   //),
                   //color: Color(0xff264796),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Color(0xff264796)),
-                    elevation: MaterialStateProperty.all(10.0),
-                    side: MaterialStateProperty.all(BorderSide(color: Colors.black26)),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    backgroundColor: WidgetStateProperty.all(Color(0xff264796)),
+                    elevation: WidgetStateProperty.all(10.0),
+                    side: WidgetStateProperty.all(BorderSide(color: Colors.black26)),
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10.0),
                           ),
@@ -60,15 +60,15 @@ class _LandingPageState extends State<LandingPage> {
               ),
               SizedBox(height: 5.0),
 
-              Container(
+              SizedBox(
                 width: screenWidth / 1.4,
                 height: 45,
                 child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Color(0xff264796)),
-                    elevation: MaterialStateProperty.all(10.0),
-                    side: MaterialStateProperty.all(BorderSide(color: Colors.black26)),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    backgroundColor: WidgetStateProperty.all(Color(0xff264796)),
+                    elevation: WidgetStateProperty.all(10.0),
+                    side: WidgetStateProperty.all(BorderSide(color: Colors.black26)),
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10.0),
                           ),

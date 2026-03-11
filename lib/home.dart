@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lagostv/more.dart';
 import 'package:lagostv/news.dart';
-import 'package:lagostv/services/webservices.dart';
 import 'package:lagostv/video_stream.dart';
 
 class Home extends StatefulWidget {
@@ -22,7 +21,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

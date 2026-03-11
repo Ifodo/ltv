@@ -106,7 +106,6 @@ class _NewsState extends State<News> {
                         ),
                       ),
                       onTap: (){
-                        var imageUrls;
                         Navigator.push(
                             context,
                             MaterialPageRoute(

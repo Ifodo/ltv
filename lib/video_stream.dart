@@ -5,7 +5,7 @@ import 'package:video_player/video_player.dart';
 import 'package:chewie/chewie.dart';
 
 class VideoStream extends StatefulWidget {
-  const VideoStream({Key? key}) : super(key: key);
+  const VideoStream({super.key});
 
   @override
   State<VideoStream> createState() => _VideoStreamState();

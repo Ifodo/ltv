@@ -1,9 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:lagostv/upload_report.dart';
-import 'package:social_media_flutter/widgets/icons.dart';
-import 'package:social_media_flutter/widgets/text.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+enum SocialIconsFlutter { instagram, facebook, twitter, youtube }
+
+class SocialWidget extends StatelessWidget {
+  const SocialWidget({
+    super.key,
+    required this.placeholderText,
+    required this.iconData,
+    required this.link,
+    this.iconColor,
+    this.placeholderStyle,
+  });
+
+  final String placeholderText;
+  final SocialIconsFlutter iconData;
+  final Color? iconColor;
+  final String link;
+  final TextStyle? placeholderStyle;
+
+  IconData _resolveIcon(SocialIconsFlutter icon) {
+    switch (icon) {
+      case SocialIconsFlutter.instagram:
+        return Icons.camera_alt;
+      case SocialIconsFlutter.facebook:
+        return Icons.facebook;
+      case SocialIconsFlutter.twitter:
+        return Icons.flutter_dash;
+      case SocialIconsFlutter.youtube:
+        return Icons.play_circle_fill;
+    }
+  }
+
+  Future<void> _openLink() async {
+    final Uri uri = Uri.parse(link);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: _openLink,
+      child: Row(
+        children: [
+          Icon(_resolveIcon(iconData), color: iconColor ?? Colors.grey),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              placeholderText,
+              style: placeholderStyle,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class More extends StatefulWidget {
   const More({super.key});
@@ -300,17 +357,6 @@ class _MoreState extends State<More> {
       },
     );
   }*/
-}
-
-_launchWhatSappUrl() async {
-  String message = 'Lagos State Television';
-  final Uri url = Uri.parse(
-      'whatsapp://send?phone=2348033344915&text=${Uri.parse(message)}');
-  if (await canLaunchUrl(url)) {
-    await launchUrl(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 /*Future<void> _launchWebsite() async {
